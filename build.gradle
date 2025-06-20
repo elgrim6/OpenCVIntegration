@@ -28,6 +28,7 @@ publishing {
             groupId = 'mz.nedbank'
             artifactId = 'opencvimpl'
             version = '1.0.0'
+
         }
     }
 }
