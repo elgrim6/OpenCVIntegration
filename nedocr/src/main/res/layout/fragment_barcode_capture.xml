@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <mz.bancounico.uocr.logic.CameraSourcePreview
+        android:id="@+id/preview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <mz.bancounico.uocr.logic.GraphicOverlay
+            android:id="@+id/graphicOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </mz.bancounico.uocr.logic.CameraSourcePreview>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryTranparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rr"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryTranparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/scanActionView"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/shape_ocr_capture"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/rr"
+        app:srcCompat="@drawable/ic_ocr_capture">
+
+
+    </ImageButton>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/rr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/viewFinderConslayout"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            app:layout_constraintBottom_toTopOf="@id/inBottomView"
+            app:layout_constraintEnd_toEndOf="@id/inRightView"
+            app:layout_constraintStart_toStartOf="@id/inLeftView"
+            app:layout_constraintTop_toBottomOf="@id/inTopView">
+
+            <View
+                android:id="@+id/viewFinder"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:alpha="0.76"
+                app:srcCompat="@drawable/ic_viewfinder"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/scanBar"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:background="@color/colorPrimary"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/inTopView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/semitransparent"
+            app:layout_constraintBottom_toTopOf="@id/viewFinderConslayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/inBottomView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/semitransparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewFinderConslayout" />
+
+        <View
+            android:id="@+id/inRightView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/viewFinderConslayout"
+            app:layout_constraintTop_toBottomOf="@id/inTopView"
+            app:layout_constraintBottom_toTopOf="@id/inBottomView"
+            android:background="@color/semitransparent"/>
+
+        <View
+            android:id="@+id/inLeftView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/viewFinderConslayout"
+            app:layout_constraintTop_toBottomOf="@id/inTopView"
+            app:layout_constraintBottom_toTopOf="@id/inBottomView"
+            android:background="@color/semitransparent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

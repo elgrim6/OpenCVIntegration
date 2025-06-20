@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">UOCR</string>
+    <string name="ok">OK</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="low_storage_error">Ocr dependencies cannot be downloaded due to low device storage</string>
+    <string name="title_activity_main">Ocr Detector Sample</string>
+    <string name="ocr_header">Click &quot;Detect Text&quot; to detect text</string>
+    <string name="read_text">Detect Text</string>
+    <string name="auto_focus">Auto Focus</string>
+    <string name="use_flash">Use Flash</string>
+    <string name="ocr_success">Text read successfully</string>
+    <string name="ocr_failure">No text captured</string>
+    <string name="ocr_error">"Error reading text: %1$s"</string>
+    <string name="confirm_picture">Continuar</string>
+    <string name="retry">Tentar novamente</string>
+    <string name="not_detected_data">Dados não detectados</string>
+    <string name="alert_message_not_detected_barcode">Qr code não detectado</string>
+    <string name="cancel">Cancelar</string>
+    <string name="select_document_dialog_title">SELECIONE O DOCUMENTO</string>
+
+
+    <string name="positive_button">Sim</string>
+    <string name="negative_butotn">Não</string>
+    <string name="exit_message">Tem certeza que deseja sair?</string>
+
+    <string-array name="documents_choises">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="success_capture_message">Dados detectados</string>
+</resources>
