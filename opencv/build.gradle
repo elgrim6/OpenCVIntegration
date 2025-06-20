@@ -162,8 +162,9 @@ android {
     }
     
     buildFeatures {
-        prefabPublishing true
+        prefabPublishing false
         buildConfig true
+        prefab false
     }
 
     prefab {
