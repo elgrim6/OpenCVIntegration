@@ -17,8 +17,8 @@ import org.opencv.imgproc.Imgproc;
 import java.io.ByteArrayOutputStream;
 import java.util.List;
 
-import mz.bancounico.uandroidasync.TaskError;
-import mz.bancounico.uandroidasync.TaskListener;
+import mz.bancounico.uocr.utils.async.TaskError;
+import mz.bancounico.uocr.utils.async.TaskListener;
 
 /**
  * Created by dds_unico on 6/4/18.

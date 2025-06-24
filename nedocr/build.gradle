@@ -2,10 +2,12 @@ apply plugin: 'com.android.library'
 
 
 android {
-    compileSdkVersion 28
+    namespace 'mz.bancounico.uocr'
+
+    compileSdk 34
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 28
+        minSdk 24
+        targetSdk 34
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -22,36 +24,36 @@ android {
     }
     buildToolsVersion '28.0.3'
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 }
 
 
 dependencies {
-    implementation('com.microblink:blinkid:4.5.0@aar') {
-        transitive = true
-    }
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.2.0-alpha01'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'com.google.firebase:firebase-core:17.2.1'
-    implementation 'com.google.android.gms:play-services-vision:17.0.2'
-    implementation 'com.google.android.gms:play-services-plus:17.0.0'
-    implementation 'com.google.android.material:material:1.2.0-alpha03'
+    implementation libs.androidx.appcompat
+    implementation libs.androidx.legacy.support.v4
+    implementation libs.androidx.scenecore
+    implementation files('../libs/blinkid-4.5.0.aar')
+    testImplementation libs.junit.v412
+    androidTestImplementation libs.androidx.runner
+    androidTestImplementation libs.androidx.espresso.core.v320
+    implementation libs.firebase.core
+    implementation libs.play.services.vision
+    implementation libs.play.services.plus
+    implementation libs.material
     //implementation project(path: ':uandroidasync')
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation libs.androidx.constraintlayout
     //    implementation 'org.opencv:OpenCV-Android:3.1.0'
-    implementation 'org.slf4j:slf4j-android:1.7.25'
-    implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'androidx.multidex:multidex:2.0.1'
-    implementation 'com.rmtheis:tess-two:9.0.0'
-    implementation 'com.otaliastudios:cameraview:2.4.0'
-    implementation 'com.google.zxing:core:3.3.3'
-    implementation 'com.wajahatkarim3.EasyFlipView:EasyFlipView:2.1.2'
+    implementation libs.slf4j.android
+    implementation libs.androidx.cardview
+    implementation libs.androidx.multidex
+    implementation libs.tess.two
+    implementation libs.cameraview
+    implementation libs.core
+    implementation libs.easyflipview
 
     implementation project(':opencv')
 

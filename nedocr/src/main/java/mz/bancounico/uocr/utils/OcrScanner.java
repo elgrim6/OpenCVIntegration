@@ -13,8 +13,8 @@ import java.util.Set;
 
 import androidx.fragment.app.Fragment;
 
-import mz.bancounico.uandroidasync.TaskError;
-import mz.bancounico.uandroidasync.TaskListener;
+import mz.bancounico.uocr.utils.async.TaskError;
+import mz.bancounico.uocr.utils.async.TaskListener;
 
 /**
  * Created by dds_unico on 6/4/18.

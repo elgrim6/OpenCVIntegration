@@ -34,6 +34,7 @@ import mz.bancounico.uocr.utils.threads.Util;
 /**
  * A simple {@link Fragment} subclass.
  */
+
 public abstract class MRZDocumentCaptureFragment extends CameraViewFragment implements UiThreadCallback {
 
 
@@ -168,7 +169,7 @@ public abstract class MRZDocumentCaptureFragment extends CameraViewFragment impl
     public void showNotDetectedProprieties() {
 
         String message = "";
-        new MaterialAlertDialogBuilder(getContext(),R.style.ThemeOverlay_MaterialComponents_MaterialAlertDialog)
+        new MaterialAlertDialogBuilder(getContext())
                 .setTitle("Número de operações")
                 .setMessage(message)
                 .setPositiveButton(R.string.confirm_picture, (dialogInterface, i) -> {

@@ -71,7 +71,7 @@ public abstract class TextCaputeFragment2 extends CameraViewFragment {
             message += pair.getValue() + "\n";
         }
 
-        new MaterialAlertDialogBuilder(getContext(),R.style.ThemeOverlay_MaterialComponents_MaterialAlertDialog)
+        new MaterialAlertDialogBuilder(getContext())
                 .setTitle("Número de operações")
                 .setMessage(message)
                 .setPositiveButton(R.string.confirm_picture, (dialogInterface, i) -> {

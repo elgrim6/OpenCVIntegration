@@ -40,7 +40,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import mz.bancounico.uandroidasync.TaskListener;
+import mz.bancounico.uocr.utils.async.TaskListener;
 import mz.bancounico.uocr.R;
 import mz.bancounico.uocr.ui.camera.OpticalCaptureActivity;
 import mz.bancounico.uocr.utils.ImageUtils;
@@ -353,14 +353,12 @@ public abstract class CameraViewFragment extends Fragment {
         AudioManager audioManager=(AudioManager) this.getActivity().getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
         currentVolume=audioManager.getStreamMaxVolume(AudioManager.STREAM_SYSTEM);
         audioManager.setStreamVolume(AudioManager.STREAM_SYSTEM,0,AudioManager.FLAG_REMOVE_SOUND_AND_VIBRATE);
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            AudioAttributes audioAttributes=new AudioAttributes.Builder()
-                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                    .setLegacyStreamType(AudioManager.STREAM_NOTIFICATION)
-                    .setUsage(AudioAttributes.USAGE_NOTIFICATION_EVENT)
-                    .build();
-            bleepCameraRing.setAudioAttributes(audioAttributes );
-        }
+        AudioAttributes audioAttributes = new AudioAttributes.Builder()
+                .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                .setLegacyStreamType(AudioManager.STREAM_NOTIFICATION)
+                .setUsage(AudioAttributes.USAGE_NOTIFICATION_EVENT)
+                .build();
+        bleepCameraRing.setAudioAttributes(audioAttributes );
     }
 
     void showScanAnimation() {

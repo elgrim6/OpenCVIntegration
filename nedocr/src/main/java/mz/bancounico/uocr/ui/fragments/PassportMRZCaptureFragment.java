@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import mz.bancounico.uandroidasync.TaskListener;
+import mz.bancounico.uocr.utils.async.TaskListener;
 import mz.bancounico.uocr.lib.com.innovatrics.mrz.MrzRecord;
 import mz.bancounico.uocr.models.Document;
 import mz.bancounico.uocr.models.IdentityCard;

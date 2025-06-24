@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import java.util.HashMap;
 
-import mz.bancounico.uandroidasync.TaskListener;
+import mz.bancounico.uocr.utils.async.TaskListener;
 import mz.bancounico.uocr.detectors.DireTextDetector;
 import mz.bancounico.uocr.models.Dire;
 import mz.bancounico.uocr.models.Document;

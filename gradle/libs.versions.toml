@@ -1,16 +1,45 @@
 [versions]
 agp = "8.10.0"
+appcompat = "1.2.0-alpha01"
+cameraview = "2.7.2"
+cardview = "1.0.0"
+constraintlayout = "1.1.3"
+core = "3.3.3"
+easyflipview = "3.0.3"
+espressoCoreVersion = "3.2.0"
+firebaseCore = "17.2.1"
+junitJunit = "4.12"
 kotlin = "2.0.21"
 coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
+legacySupportV4 = "1.0.0"
 lifecycleRuntimeKtx = "2.9.1"
 activityCompose = "1.10.1"
 composeBom = "2024.09.00"
+material = "1.2.0-alpha03"
+multidex = "2.0.1"
+playServicesPlus = "17.0.0"
+playServicesVision = "17.0.2"
+runner = "1.2.0"
+scenecore = "1.0.0-alpha04"
+slf4jAndroid = "1.7.25"
+tessTwo = "9.0.0"
 
 [libraries]
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+androidx-cardview = { module = "androidx.cardview:cardview", version.ref = "cardview" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-espresso-core-v320 = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCoreVersion" }
+androidx-legacy-support-v4 = { module = "androidx.legacy:legacy-support-v4", version.ref = "legacySupportV4" }
+androidx-multidex = { module = "androidx.multidex:multidex", version.ref = "multidex" }
+androidx-runner = { module = "androidx.test:runner", version.ref = "runner" }
+cameraview = { module = "com.otaliastudios:cameraview", version.ref = "cameraview" }
+core = { module = "com.google.zxing:core", version.ref = "core" }
+easyflipview = { module = "com.wajahatkarim:EasyFlipView", version.ref = "easyflipview" }
+firebase-core = { module = "com.google.firebase:firebase-core", version.ref = "firebaseCore" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -24,6 +53,13 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-scenecore = { group = "androidx.xr.scenecore", name = "scenecore", version.ref = "scenecore" }
+junit-v412 = { module = "junit:junit", version.ref = "junitJunit" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+play-services-plus = { module = "com.google.android.gms:play-services-plus", version.ref = "playServicesPlus" }
+play-services-vision = { module = "com.google.android.gms:play-services-vision", version.ref = "playServicesVision" }
+slf4j-android = { module = "org.slf4j:slf4j-android", version.ref = "slf4jAndroid" }
+tess-two = { module = "com.rmtheis:tess-two", version.ref = "tessTwo" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
