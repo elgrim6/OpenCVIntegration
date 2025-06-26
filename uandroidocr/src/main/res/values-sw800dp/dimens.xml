@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="camera_viewFinderWidth">640dp</dimen>
-    <dimen name="camera_viewFinderHeight">397dp</dimen>
-    <dimen name="illustration_camera_viewFinderWidth">210dp</dimen>
-    <dimen name="_illustration_camera_viewFinderHeight">129dp</dimen>
-</resources>
