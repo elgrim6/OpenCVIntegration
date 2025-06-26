@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true" >
+
+
+    <com.otaliastudios.cameraview.CameraView
+        android:id="@+id/camera"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:keepScreenOn="true"
+        app:cameraExperimental="true"
+        app:cameraPreview="glSurface"
+        app:cameraPlaySounds="false"
+        app:cameraGrid="off"
+        app:cameraHdr="on"
+        app:cameraFlash="off"
+        app:cameraAudio="off"
+        app:cameraFacing="back"
+        app:cameraGestureTap="autoFocus"
+        app:cameraGestureLongTap="none"
+        app:cameraGesturePinch="zoom"
+        app:cameraGestureScrollHorizontal="filterControl1"
+        app:cameraGestureScrollVertical="exposureCorrection"
+        app:cameraMode="picture"
+        app:cameraAutoFocusMarker="@string/cameraview_default_autofocus_marker"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cropRootView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/viewFinderConslayout"
+            android:layout_width="@dimen/camera_viewFinderWidth"
+            android:layout_height="@dimen/camera_viewFinderHeight"
+            app:layout_constraintBottom_toTopOf="@id/inBottomView"
+            app:layout_constraintEnd_toEndOf="@id/inRightView"
+            app:layout_constraintStart_toStartOf="@id/inLeftView"
+            app:layout_constraintTop_toBottomOf="@id/inTopView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/viewFinder"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:alpha="1"
+                android:background="@drawable/ic_camera_view_finder"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <View
+                        android:id="@+id/scanBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@color/colorPrimary" />
+                </FrameLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/rotationEffectLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="25dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:alpha="0.6"
+                            android:background="@color/colorPrimary"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:alpha="0.8"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_rotate_card_doc_icon" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/inTopView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/semitransparent"
+            app:layout_constraintBottom_toTopOf="@id/viewFinderConslayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/inBottomView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/semitransparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewFinderConslayout" />
+
+        <View
+            android:id="@+id/inRightView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/semitransparent"
+            app:layout_constraintBottom_toTopOf="@id/inBottomView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/viewFinderConslayout"
+            app:layout_constraintTop_toBottomOf="@id/inTopView" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/inLeftView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/semitransparent"
+            app:layout_constraintBottom_toTopOf="@id/inBottomView"
+            app:layout_constraintEnd_toStartOf="@id/viewFinderConslayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inTopView" >
+
+            <TextView
+                android:id="@+id/passportSideIndicatorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="2dp"
+                android:text="FRENTE"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/passportPositionGuideImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:visibility="visible" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="@dimen/illustration_camera_viewFinderWidth"
+                android:layout_height="@dimen/_illustration_camera_viewFinderHeight"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/ic_camera_view_finder"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.wajahatkarim3.easyflipview.EasyFlipView
+                    android:id="@+id/easyFlipView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:autoFlipBack="false"
+                    app:flipDuration="400"
+                    app:flipEnabled="true"
+                    app:flipFrom="right"
+                    app:flipOnTouch="true"
+                    app:flipType="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="gone">
+
+                    <!-- Back Layout Goes Here -->
+                    <include layout="@layout/document_flip_layout_back" />
+
+                    <!-- Front Layout Goes Here -->
+                    <include layout="@layout/document_flip_layout_front" />
+                </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/documentSideIndicatorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="FRENTE"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/passportPositionGuideImageView"
+                android:layout_width="122dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
+                app:layout_constraintDimensionRatio="h,1:1"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+                app:srcCompat="@mipmap/passport_moz_illustration"
+                tools:visibility="visible" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/documentTypeIndicatorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:alpha="0.7"
+            android:text="BILHETE DE IDENTIDADE"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/inTopView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/scanActionView"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/shape_ocr_capture"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_ocr_capture" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
