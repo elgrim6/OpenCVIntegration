@@ -32,29 +32,26 @@ android {
 
 dependencies {
 
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation libs.androidx.appcompat
-    implementation libs.androidx.legacy.support.v4
-    implementation libs.androidx.scenecore
-    implementation files('../libs/blinkid-4.5.0.aar')
     testImplementation libs.junit.v412
     androidTestImplementation libs.androidx.runner
     androidTestImplementation libs.androidx.espresso.core.v320
-    implementation libs.firebase.core
-    implementation libs.play.services.vision
-    implementation libs.play.services.plus
-    implementation libs.material
-    //implementation project(path: ':uandroidasync')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //implementation files('../libs/blinkid-4.5.0.aar')
+    implementation libs.androidx.legacy.support.v4
     implementation libs.androidx.constraintlayout
-    //    implementation 'org.opencv:OpenCV-Android:3.1.0'
-    implementation libs.slf4j.android
+    implementation libs.androidx.scenecore
+    implementation libs.androidx.appcompat
     implementation libs.androidx.cardview
     implementation libs.androidx.multidex
-    implementation libs.tess.two
-    implementation libs.cameraview
-    implementation libs.core
+    implementation libs.play.services.vision
+    implementation libs.play.services.plus
+    implementation libs.slf4j.android
+    implementation libs.firebase.core
     implementation libs.easyflipview
-
+    implementation libs.blinkid.ux
+    implementation libs.cameraview
+    implementation libs.tess.two
+    implementation libs.material
+    implementation libs.core
     implementation project(':opencv')
-
 }

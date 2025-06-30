@@ -1,6 +1,7 @@
 [versions]
 agp = "8.10.0"
 appcompat = "1.2.0-alpha01"
+blinkidUx = "7.1.0"
 cameraview = "2.7.2"
 cardview = "1.0.0"
 constraintlayout = "1.1.3"
@@ -36,6 +37,7 @@ androidx-espresso-core-v320 = { module = "androidx.test.espresso:espresso-core",
 androidx-legacy-support-v4 = { module = "androidx.legacy:legacy-support-v4", version.ref = "legacySupportV4" }
 androidx-multidex = { module = "androidx.multidex:multidex", version.ref = "multidex" }
 androidx-runner = { module = "androidx.test:runner", version.ref = "runner" }
+blinkid-ux = { module = "com.microblink:blinkid-ux", version.ref = "blinkidUx" }
 cameraview = { module = "com.otaliastudios:cameraview", version.ref = "cameraview" }
 core = { module = "com.google.zxing:core", version.ref = "core" }
 easyflipview = { module = "com.wajahatkarim:EasyFlipView", version.ref = "easyflipview" }
